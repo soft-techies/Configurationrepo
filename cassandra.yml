@@ -1,0 +1,12 @@
+auto_bootstrap: false
+commitlog_sync: batch
+partitioner: org.apache.cassandra.dht.Murmur3Partitioner
+endpoint_snitch: GossipingPropertyFileSnitch
+cluster_name: cluster
+num_tokens: 8
+seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+      - seeds: "cassandra-0"
+
+
